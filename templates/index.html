@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Imágenes de Tumores</h2>
+    <div>
+        {% for image_name in image_names %}
+            <div>
+                <img src="{{ url_for('static', filename='img/' + image_name) }}" alt="{{ image_name }}" width="300">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
